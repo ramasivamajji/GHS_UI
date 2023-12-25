@@ -31,9 +31,9 @@ export default function Header() {
       <Popover.Header as="h2" className="text-primary fw-bold">YOUR PROFILE @GHC</Popover.Header>
       <Popover.Body>
         <ul className="list-group fw-bold">
-          <li className="list-group-item"><FaUser /> {profile.user_name}</li>
+          <li className="list-group-item"><FaUser /> {profile?.user_name}</li>
           <li className="list-group-item"><FaMailBulk /> {user_email}</li>
-          <li className="list-group-item"><FaPhoneAlt /> {profile.user_mobile}</li>
+          <li className="list-group-item"><FaPhoneAlt /> {profile?.user_mobile}</li>
         </ul>
       </Popover.Body>
     </Popover>
