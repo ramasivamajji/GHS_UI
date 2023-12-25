@@ -3,7 +3,7 @@ import * as ghc from "react-bootstrap";
 import { SlArrowUpCircle, SlArrowDownCircle } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import { SweetAlertLoginSuccess } from "./CommonFiles/SweetAlerts";
+import { SweetAlertGeneral, SweetAlertLoginSuccess } from "./CommonFiles/SweetAlerts";
 
 const Login = () => {
 
@@ -25,10 +25,16 @@ const Login = () => {
       user_password: Yup.string().required('Required'),
     }),
     onSubmit: (values) => {
-      localStorage.setItem("user_email", values.user_email);
-      localStorage.setItem("is_logged", "true");
-      SweetAlertLoginSuccess();
-      window.location.href = "/services";
+      const profile = JSON.parse(localStorage.getItem("profile"));
+      if (profile !== undefined && profile !== null && profile.user_email === values.user_email && profile.user_password === values.user_password) {
+        localStorage.setItem("user_email", values.user_email);
+        localStorage.setItem("is_logged", "true");
+        SweetAlertLoginSuccess();
+        window.location.href = "/services";
+      } else {
+        SweetAlertGeneral("Failed", "Invalid Credentials. Please Register!", "error");
+      }
+
     }
   });
 
@@ -97,7 +103,7 @@ const Login = () => {
                       <ghc.Row className="my-2">
                         <ghc.Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                         </ghc.Col>
-                        <ghc.Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4}>
+                        <ghc.Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                           <span className="text-muted text-decoration-underline">forget Password?</span>
                         </ghc.Col>
 

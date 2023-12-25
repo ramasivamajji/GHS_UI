@@ -34,6 +34,7 @@ const Register = () => {
             retype_password: Yup.string().required('Required').oneOf([Yup.ref('user_password'), null], 'Passwords must match'),
         }),
         onSubmit: (values) => {
+            localStorage.setItem("profile", JSON.stringify(values));
             SweetAlertGeneral("Registration Successful", `Dear ${values.user_name}, you have succesfully registered in our website. Use your email ${values.user_email} to login to our portal.`, "success");
             nav()
         },

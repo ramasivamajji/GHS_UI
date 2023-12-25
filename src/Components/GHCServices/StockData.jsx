@@ -96,7 +96,7 @@ export default function StockData() {
             <ghc.Row className="my-5">
                 <ghc.Col xs={12} sm={12} md={12} lg={2} xl={2} xxl={2}></ghc.Col>
                 <ghc.Col xs={12} sm={12} md={12} lg={8} xl={8} xxl={8}>
-                    <span className="text-primary h3 text-decoration-underline">Golden Hills - Stock Data</span>
+                    <span className="text-primary h3">Golden Hills - Stock Data</span>
                 </ghc.Col>
                 <ghc.Col xs={12} sm={12} md={12} lg={2} xl={2} xxl={2}></ghc.Col>
             </ghc.Row>

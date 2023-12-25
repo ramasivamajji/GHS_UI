@@ -14,8 +14,9 @@ import Popover from 'react-bootstrap/Popover';
 
 export default function Header() {
 
-  // const user_email = localStorage.getItem("user_email");
+  const user_email = localStorage.getItem("user_email");
   const is_logged = localStorage.getItem("is_logged");
+  const profile = JSON.parse(localStorage.getItem("profile"));
   console.log(is_logged);
 
   function logOut() {
@@ -30,9 +31,9 @@ export default function Header() {
       <Popover.Header as="h2" className="text-primary fw-bold">YOUR PROFILE @GHC</Popover.Header>
       <Popover.Body>
         <ul className="list-group fw-bold">
-          <li className="list-group-item"><FaUser /> Ramasiva Majji</li>
-          <li className="list-group-item"><FaMailBulk /> ramasiva2022@gmail.com</li>
-          <li className="list-group-item"><FaPhoneAlt /> 8499007575</li>
+          <li className="list-group-item"><FaUser /> {profile.user_name}</li>
+          <li className="list-group-item"><FaMailBulk /> {user_email}</li>
+          <li className="list-group-item"><FaPhoneAlt /> {profile.user_mobile}</li>
         </ul>
       </Popover.Body>
     </Popover>
@@ -41,7 +42,7 @@ export default function Header() {
   const Profile = () => (
     <OverlayTrigger placement="bottom" overlay={popover}>
       <li className="list-group-item ">
-        <FaUser size={20} className="text-primary" /> : Ramasiva</li>
+        <FaUser size={20} className="text-primary" /> : {user_email}</li>
     </OverlayTrigger>
   );
 

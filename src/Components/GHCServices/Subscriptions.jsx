@@ -58,10 +58,10 @@ export default function Subscriptions() {
 
     return (
         <>
-            <Row className="mb-4">
+            <Row className="mb-4 mt-4">
                 <Col xs={12} sm={12} md={12} lg={2} xl={2} xxl={2}></Col>
                 <Col xs={12} sm={12} md={12} lg={8} xl={8} xxl={8}>
-                    <h3 className="text-primary mt-3 text-decoration-underline ">Subscriptions</h3>
+                    <h3 className="text-primary mt-3 ">Subscriptions</h3>
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={2} xl={2} xxl={2}></Col>
             </Row>
