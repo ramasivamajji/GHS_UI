@@ -1,18 +1,18 @@
 **To run this application, follow these steps:**
 
-**Clone the Repository:**
+**1.Clone the Repository:**
 
 Git clone this repository
 https://github.com/ramasivamajji/GHS_UI.git
 
-**Navigate to the Project Directory:**
+**2.Navigate to the Project Directory:**
 
 After cloning, navigate to the project directory (GHS_UI).
 
-**Install Node Modules:**
+**3.Install Node Modules:**
 
 Run the command **npm install**
 
-**Start the Application:**
+**4.Start the Application:**
 
 Run the command **npm start**
