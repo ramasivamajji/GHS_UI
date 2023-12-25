@@ -12,9 +12,9 @@ export default function ProfilePage() {
 
                 <h2 className="text-primary fw-bold">YOUR PROFILE @GHC</h2>
                 <ul className="list-group fw-bold">
-                    <li className="list-group-item"><FaUser /> {profile.user_name}</li>
-                    <li className="list-group-item"><FaMailBulk /> {profile.user_email}</li>
-                    <li className="list-group-item"><FaPhoneAlt /> {profile.user_mobile}</li>
+                    <li className="list-group-item"><FaUser /> {profile?.user_name}</li>
+                    <li className="list-group-item"><FaMailBulk /> {profile?.user_email}</li>
+                    <li className="list-group-item"><FaPhoneAlt /> {profile?.user_mobile}</li>
                 </ul>
             </Col>
             <Col xs={12} sm={12} md={12} lg={2} xl={2} xxl={2}></Col>
